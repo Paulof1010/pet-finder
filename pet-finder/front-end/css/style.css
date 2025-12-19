@@ -1,0 +1,401 @@
+/* =========================
+   GLOBAL RESET & VARIABLES
+   ========================= */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+
+:root {
+  --bg-main: #f6aa59;
+  --bg-card: #ffffff;
+  --bg-soft: #e9f3f4;
+  --color-dark: #000000;
+  --color-accent: rgb(0, 175, 0);
+  --radius: 12px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Montserrat", system-ui, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--color-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* =========================
+   HEADER & NAVIGATION
+   ========================= */
+.site-header {
+  width: 100%;
+  background-color: var(--bg-main);
+}
+
+.site-logo {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0;
+}
+
+.site-logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: var(--bg-card);
+  padding: 0.5rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background-color: var(--color-dark);
+  color: #ffffff;
+}
+
+#login-icon {
+  margin-left: auto;
+}
+
+#login-icon i {
+  font-size: 2rem;
+}
+
+/* =========================
+   MAIN CONTENT WRAPPER
+   ========================= */
+.site-content {
+  width: min(1100px, 95%);
+  background-color: var(--bg-card);
+  margin: 1rem 0 2rem;
+  padding: 1rem;
+  border-radius: var(--radius);
+  min-height: calc(100vh - 220px);
+  overflow-y: auto;
+}
+
+/* =========================
+   TYPOGRAPHY
+   ========================= */
+h1,
+h2,
+h3 {
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+p {
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+/* =========================
+   HOME / ABOUT / DONATIONS
+   ========================= */
+.home,
+.about,
+.donations {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.home-card,
+.about-card,
+.donations-card {
+  background-color: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+}
+
+.home-hero img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+.about-highlight,
+.donations-highlight {
+  border-left: 5px solid var(--color-accent);
+  background-color: rgba(0, 175, 0, 0.1);
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* =========================
+   MISSING PETS GRID
+   ========================= */
+.missing-pets {
+  width: 100%;
+  text-align: center;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.filters label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+
+.pets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.pet-card {
+  background-color: var(--bg-soft);
+  border-radius: var(--radius);
+  padding: 1rem;
+  transition: transform 0.2s;
+}
+
+.pet-card:hover {
+  transform: scale(1.03);
+}
+
+.pet-card img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.pet-card.old-report {
+  opacity: 0.7;
+  border: 2px solid red;
+}
+
+/* =========================
+   CARD ACTION BUTTONS
+   ========================= */
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.card-actions button {
+  background-color: var(--color-dark);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem;
+  cursor: pointer;
+}
+
+.card-actions button:hover {
+  background-color: var(--bg-main);
+  color: var(--color-dark);
+}
+
+/* =========================
+   FORMS (LOGIN / REPORT)
+   ========================= */
+.report-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.user-info,
+.pet-info,
+.login-card {
+  background-color: var(--bg-soft);
+  padding: 1rem;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  padding: 0.5rem;
+  font-size: 16px;
+}
+
+.report-form-btn {
+  background-color: var(--color-dark);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem;
+  cursor: pointer;
+}
+
+.report-form-btn:hover {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+}
+
+/* =========================
+   MAP
+   ========================= */
+#map {
+  width: 100%;
+  height: 220px;
+  border-radius: var(--radius);
+  margin-top: 0.75rem;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.site-footer {
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: var(--bg-main);
+  margin-top: auto;
+}
+
+/* =========================
+   DESKTOP ENHANCEMENTS
+   ========================= */
+@media (min-width: 768px) {
+  .site-logo img {
+    max-width: 170px;
+  }
+
+  .report-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #map {
+    height: 280px;
+  }
+
+  #login-icon i {
+    font-size: 3rem;
+  }
+}
+
+.user-info label,
+.pet-info label,
+.login-card label {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  align-items: center;
+  column-gap: 0.75rem;
+}
+.user-info input,
+.user-info select,
+.pet-info input,
+.pet-info select,
+.login-card input {
+  width: 100%;
+}
+
+.photo-section {
+  margin-top: 0.75rem;
+}
+.photo-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.photo-buttons button {
+  background-color: var(--color-dark);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+.photo-buttons button:hover {
+  background-color: var(--bg-main);
+  color: var(--color-dark);
+}
+.photo-preview img {
+  max-width: 100%;
+  max-height: 220px;
+  border-radius: var(--radius);
+  display: none;
+  margin-top: 0.5rem;
+}
+.report-form-btn {
+  justify-self: center;
+  min-width: 220px;
+}
+
+.preview-container {
+  display: inline-block;
+  position: relative;
+  margin: 5px;
+}
+
+.preview-thumb {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.remove-photo-btn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: rgba(255, 0, 0, 0.8);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 18px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: #666;
+}

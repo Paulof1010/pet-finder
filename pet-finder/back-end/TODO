@@ -1,0 +1,20 @@
+TODO:
+
+- base de dados. nome - pet-finder
+- criar seeds / script? para inicializar a nossa pase de dados preenchida de alguma forma?
+
+- criar controladores
+
+- get bacl to animal controller. find solution for various request parameter possibilities. *
+
+- is it worth making a class for Location. where the only two attributes woukld be latitude and longitude ***
+
+- review Date object ****
+
+- should a missin occurrence have both a owner/user and an animal?
+
+- DTO's nedded?
+
+
+
+- INCLUIR VERSIONS TIMESTAMPS ETC NAS ENTITIES !!!!!!!!!!
