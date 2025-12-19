@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Pet Finder helps you find missing pets and report sightings in your area."
+    />
+    <title>Pet Finder</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/" title="Homepage">HOME</a></li>
+          <li><a href="/about" title="About">ABOUT US</a></li>
+          <li><a href="/missingPets" title="Missing Pets">MISSING PETS</a></li>
+          <li><a href="/sightings" title="Pet Sightings">SIGHTINGS</a></li>
+          <li><a href="/report" title="Make a Report">REPORT</a></li>
+          <li><a href="/donations" title="Donations">DONATIONS</a></li>
+          <li id="login-icon">
+            <a href="/login" title="Login"><i class="fas fa-paw"></i></a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="site-logo">
+        <a href="/">
+          <img src="img/logo/logo.jpg" alt="Pet Finder Logo" />
+        </a>
+      </div>
+    </header>
+
+    <main id="app" class="site-content"></main>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 Pet Finder</p>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Custom JS -->
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
