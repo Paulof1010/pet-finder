@@ -25,8 +25,11 @@ This project uses the following technologies:
 ## Repository Structure
 
 pet-finder/
+
 ├── frontend/ # HTML/CSS/JS files for UI
+
 ├── backend/ # Java code for server/API handling
+
 └── README.md # Project documentation
 
 ## Features (Planned)
