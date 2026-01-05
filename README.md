@@ -4,7 +4,7 @@ A project aimed at helping users find their domestic pets.
 This project was part of Code for All_'s Bootcamp #107.
 
 Made by CaniPETS :
-Francisco Cardoso,
+Francisco Ramos,
 Paulo Ferreira,
 Pedro Sequeira e
 Rafael Silva.
