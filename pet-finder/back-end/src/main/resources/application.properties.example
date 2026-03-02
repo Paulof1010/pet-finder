@@ -1,0 +1,12 @@
+spring.application.name=my-pet-app
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/petfinder
+spring.datasource.username=YOUR_USERNAME
+spring.datasource.password=YOUR_PASSOWRD
+
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.show-sql=true
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+
+#spring.sql.init.mode=always
+spring.sql.init.schema-locations=classpath:db/pet-finder_seeds.sql
