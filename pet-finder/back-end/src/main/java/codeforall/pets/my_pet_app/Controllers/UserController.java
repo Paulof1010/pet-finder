@@ -14,12 +14,10 @@ import java.util.List;
 @RestController
 public class UserController {
 
-    // dependencies
     private UserService userService;
     private Converter converter;
 
 
-    // get requests
     @GetMapping("/user/{userId}")
     public ResponseEntity<UserDTO> getUser(@PathVariable int userId) {
 
@@ -50,7 +48,6 @@ public class UserController {
 
     }
 
-    // post requests
     @PostMapping(path = "/user")
     public ResponseEntity<?> addUser(@RequestBody UserDTO userDto) {
 
@@ -66,7 +63,6 @@ public class UserController {
 
     }
 
-    // put requests
     @PutMapping(path = "/user")
     public ResponseEntity<?> editUser(@RequestBody UserDTO userDto) {
 
@@ -82,7 +78,6 @@ public class UserController {
 
     }
 
-    // delete requests
     @DeleteMapping(path = "/user/{userId}")
     public ResponseEntity<?> deleteUser(@PathVariable int userId){
 

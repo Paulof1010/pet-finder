@@ -19,12 +19,10 @@ import java.util.*;
 @RestController
 public class AnimalController {
 
-    //dependencies
     private AnimalService animalService;
     private OccurrenceService occurrenceService;
     private Converter converter;
 
-    // get requests
     @GetMapping("/pets/{petId}")
     public ResponseEntity<AnimalDTO> getAnimal(@PathVariable int petId) {
 
@@ -73,9 +71,6 @@ public class AnimalController {
 
     }
 
-
-
-    // post requests
     @PostMapping(path = "/pets")
     public ResponseEntity<?> addAnimal(@RequestBody AnimalDTO animalDto) {
 
@@ -106,10 +101,6 @@ public class AnimalController {
         }
     }
 
-
-
-
-    // put requests
     @PutMapping(path = "/pets/")
     public ResponseEntity<?> editAnimal(@RequestBody AnimalDTO animalDto) {
 
@@ -125,7 +116,6 @@ public class AnimalController {
 
     }
 
-    // delete requests
     @DeleteMapping(path = "/pets/{petId}")
     public ResponseEntity<?> deleteAnimal(@PathVariable int petId){
 
@@ -139,40 +129,6 @@ public class AnimalController {
         }
     }
 
-
-
-//    @GetMapping("/pets/{userId}")
-//    public ResponseEntity<AnimalDTO> getAnimal(@PathVariable int userId) {
-//
-//        try{
-//            return new ResponseEntity<>(Converter.animalToAnimalDto(userService.findBy(userId).getAnimal()), HttpStatus.OK);
-//        } catch (Exception e) {
-//            e.fillInStackTrace();
-//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//        }
-//    }
-
-
-//    @GetMapping("/pets")
-//    public ResponseEntity<List<Animal>> listAnimals(
-//            @RequestParam String type,
-//            @RequestParam String color,
-//            @RequestParam String breed) {
-//
-//        return new ResponseEntity<>(animalService.listAll(type, color, breed), HttpStatus.OK);
-//    }
-
-//    @GetMapping("/pet/occurrences/")
-//    public ResponseEntity<List<AnimalDTO>> listAnimals(
-//            @RequestParam String date,
-//            @RequestParam int latitude,
-//            @RequestParam int longitude) {
-//
-//        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//    }
-
-
-    //setters
     @Autowired
     public void setAnimalService(AnimalService animalService) {
         this.animalService = animalService;

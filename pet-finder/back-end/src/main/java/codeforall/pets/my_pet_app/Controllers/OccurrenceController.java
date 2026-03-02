@@ -21,13 +21,11 @@ import java.util.List;
 @RestController
 public class OccurrenceController {
 
-    // dependencies
     private OccurrenceService occurrenceService;
     private AnimalService animalService;
     private Converter converter;
 
 
-    // get requests
     @GetMapping("/occurrence/{occId}")
     public ResponseEntity<OccurrenceDTO> get(@PathVariable int occId) {
 
@@ -58,7 +56,6 @@ public class OccurrenceController {
 
     }
 
-    // post requests
     @PostMapping(path = "/occurrence")
     public ResponseEntity<?> add(@RequestBody OccurrenceDTO occurrenceDTO) {
 
@@ -106,7 +103,6 @@ public class OccurrenceController {
 
     }
 
-    //put requests
     @PutMapping(path = "/occurrence")
     public ResponseEntity<?> edit(@RequestBody OccurrenceDTO occurrenceDTO) {
 
@@ -122,7 +118,6 @@ public class OccurrenceController {
 
     }
 
-    // delete requests
     @DeleteMapping(path = "/occurrence/{occId}")
     public ResponseEntity<?> delete(@PathVariable int occId){
 
