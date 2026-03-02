@@ -8,12 +8,12 @@ async function init() {
   const app = document.getElementById("app");
   app.innerHTML = renderMissingPetsView();
 
-  initMap(); // Initialize the map
+  initMap();
 
   try {
     const pets = await missingPetsService.getAllLostPets();
     displayPets(pets);
-    updateMap(pets); // Add markers to the map
+    updateMap(pets);
   } catch (err) {
     console.error("Failed to load missing pets:", err);
     app.innerHTML += "<p>Failed to load missing pets.</p>";
@@ -36,7 +36,7 @@ function displayPets(pets) {
       <p><strong><i>ID:</i></strong> ${pet.animal.id}</p>
       <p><strong><i>Name:</i></strong> ${pet.animal.name}</p>
       <p><strong><i>Last Seen:</i></strong> ${new Date(
-        pet.date
+        pet.date,
       ).toLocaleDateString()}</p>
       <p><strong><i>Species:</i></strong> ${pet.animal.breed}</p>
       <p><strong><i>Color:</i></strong> ${pet.animal.color}</p>

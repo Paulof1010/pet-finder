@@ -1,6 +1,4 @@
-// js/services/missingPetsService.js
-
-const API_BASE = "http://13.40.192.86:8080"; // adjust if your backend is on a different path/port
+const API_BASE = "http://localhost:8080";
 
 export const missingPetsService = {
   getAllLostPets,

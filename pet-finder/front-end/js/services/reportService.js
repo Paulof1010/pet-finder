@@ -3,7 +3,7 @@
  * Handles API communication for reports
  */
 
-const API_BASE = "http://13.40.192.86:8080";
+const API_BASE = "http://localhost:8080";
 
 async function submitReport(reportData) {
   const response = await fetch(`${API_BASE}/occurrence`, {
